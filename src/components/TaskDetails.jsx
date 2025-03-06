@@ -1,7 +1,6 @@
 import { Star, Plus, Bell, Calendar, Repeat, Trash2 } from "lucide-react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteTask, toggleTaskCompletion } from "../store/tasksSlice";
-import { useEffect } from "react";
 
 const TaskInfo = () => {
   const { dark } = useSelector((state) => state.app);

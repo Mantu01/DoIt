@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Star } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTask, toggleTaskCompletion, setTaskPriority, selectTask } from "../store/tasksSlice";
+import { addTask, toggleTaskCompletion, selectTask } from "../store/tasksSlice";
 
 function TaskList() {
   const { tasks } = useSelector((state) => state.tasks);
@@ -18,10 +18,6 @@ function TaskList() {
 
   const handleToggleTask = (id) => {
     dispatch(toggleTaskCompletion(id));
-  };
-
-  const handleSetPriority = (id, priority) => {
-    dispatch(setTaskPriority({ id, priority }));
   };
 
   const handleSelectTask = (task) => {
