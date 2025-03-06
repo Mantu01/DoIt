@@ -1,0 +1,75 @@
+.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.dark-mode .sidebar {
+  background-color: #343a40 !important;
+  color: #f8f9fa;
+}
+
+.dark-mode .task-list {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.dark-mode .form-control {
+  background-color: #495057;
+  color: #f8f9fa;
+  border-color: #6c757d;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-list {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.user-profile img {
+  border-radius: 50%;
+}
+
+.sidebar-transition {
+  transition: transform 0.4s ease-in-out, opacity 0.4s;
+}
+.sidebar-transition.hide {
+  transform: translateX(-100%);
+  opacity: 0;
+  position: absolute;
+}
+.sidebar-transition.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.sidebar-transition, .details-transition {
+  transition: transform 0.4s ease-in-out, opacity 0.4s;
+}
+
+.sidebar-transition.hide, .details-transition.hide {
+  transform: translateX(-100%);
+  opacity: 0;
+  position: absolute; /* Prevent layout shift */
+}
+
+.sidebar-transition.show, .details-transition.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.text-emphasis {
+  color: #3E98C7;
+}
